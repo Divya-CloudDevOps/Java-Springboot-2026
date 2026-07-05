@@ -25,9 +25,9 @@ jobs:
             set -e
 
             APP_DIR=/home/ec2-user/front
-            REPO_NAME=Java-springboot-project
-            REPO_URL=https://github.com/CloudTechDevOps/Java-springboot-project.git
-
+            REPO_NAME=Java-Springboot-2026
+            REPO_URL=https://github.com/Divya-CloudDevOps/Java-Springboot-2026.git
+            
             echo "🚀 Starting deployment..."
 
             mkdir -p $APP_DIR
@@ -66,9 +66,9 @@ jobs:
             
             [Service]
             User=ec2-user
-            WorkingDirectory=/home/ec2-user/front/Java-springboot-project/frontend
+            WorkingDirectory=/home/ec2-user/front/Java-Springboot-2026/frontend
             
-            ExecStart=/bin/bash -c 'source /home/ec2-user/front/Java-springboot-project/frontend/venv/bin/activate && streamlit run app.py --server.port=8501 --server.address=0.0.0.0'
+            ExecStart=/bin/bash -c 'source /home/ec2-user/front/Java-Springboot-2026/frontend/venv/bin/activate && streamlit run app.py --server.port=8501 --server.address=0.0.0.0'
             
             Environment=API_URL=http://localhost:8084
             
